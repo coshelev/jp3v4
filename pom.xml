@@ -2,8 +2,8 @@
 <project>
 <modelVersion>4.0.0</modelVersion>
 <groupId>com.mycompany.a</groupId>
-<artifactId>myapp2</artifactId>
-<version>1.o</version>
+<artifactId>myapp</artifactId>
+<version>1.1</version>
 <packaging>jar</packaging>
    <build>
         <plugins>
