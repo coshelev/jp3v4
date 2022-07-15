@@ -33,7 +33,8 @@ public class SSEventSourceServlet extends org.eclipse.jetty.servlets.EventSource
         	//response.setStatus(HttpServletResponse.SC_OK);
         	//response.getWriter().println("<h1>SSEventSourceServlet</h1>");
         	//response.getWriter().println("session=" + request.getSession(true).getId());
-		response.addHeader("Access-Control-Allow-Origin", "*");
+
+		//response.addHeader("Access-Control-Allow-Origin", "*");
 		super.doGet(request, response);
     	}
 
