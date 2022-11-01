@@ -39,7 +39,7 @@ public class MailServlet extends HttpServlet {
    
    private void readAutobrokerMail(){
          final String user = "luidorexpertALL";       
-         final String pass = "kiduttocmomzgdqk";
+         final String pass = "luidor125179";
          final String host = "imap.yandex.ru";
 
          try {
