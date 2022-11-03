@@ -58,7 +58,8 @@ public class MailServlet extends HttpServlet {
 
             inbox.open(Folder.READ_ONLY);
             
-            final FromTerm fromTerm  = new FromTerm(new InternetAddress("no-reply@a-b63.ru"));
+            final FromTerm fromTerm  = new FromTerm(new InternetAddress("no_reply@ab-club.ru"));
+	    final FromTerm fromTerm1  = new FromTerm(new InternetAddress("no-reply@bibika.ru"));
                       
             var a = java.time.LocalDate.now().minusDays(1);
             Date  receivedDate = java.sql.Date.valueOf(a);
@@ -72,7 +73,7 @@ public class MailServlet extends HttpServlet {
                 System.out.println("********************");
                
                //Filter by sender
-               if (i.match(fromTerm)!=true) continue;
+               if ((i.match(fromTerm) || i.match(fromTerm1) )!=true) continue;
         
                MimeMessage m = (MimeMessage) i;
                String messageId = m.getMessageID();
