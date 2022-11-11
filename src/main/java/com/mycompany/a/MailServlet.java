@@ -13,6 +13,7 @@ import org.jsoup.*;
 import org.jsoup.nodes.Document;
 import java.net.URI;
 import java.net.http.*;
+import java.util.regex.*;
 
 public class MailServlet extends HttpServlet {
     private String greeting="Hello World from MailServlet";
@@ -82,6 +83,14 @@ public class MailServlet extends HttpServlet {
               
                //Multipart mp1 = (Multipart) i.getContent();
                String mp1 = (String) i.getContent();
+	       System.out.println("mp1 = "+mp1);
+
+	       boolean hasPhone = Pattern.matches(mp1, "[0-9][0-9][0-9][0-9]");
+	       if (!hasPhone){ 
+			System.out.println("text has no phone");
+		       return;};
+
+
             
                Document doc = Jsoup.parse(mp1);
                String text = doc.body().text();  

@@ -35,6 +35,9 @@
                 <transformer>
                   <mainClass>com.mycompany.a.A</mainClass>
                   <mainClass>A</mainClass>
+                  <manifestEntries>
+                    <Multi-Release>true</Multi-Release>
+                  </manifestEntries>
                 </transformer>
               </transformers>
             </configuration>
