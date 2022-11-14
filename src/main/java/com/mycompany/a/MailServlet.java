@@ -83,19 +83,29 @@ public class MailServlet extends HttpServlet {
               
                //Multipart mp1 = (Multipart) i.getContent();
                String mp1 = (String) i.getContent();
-	       System.out.println("mp1 = "+mp1);
-
-	       boolean hasPhone = Pattern.matches(mp1, "[0-9][0-9][0-9][0-9]");
-	       if (!hasPhone){ 
-			System.out.println("text has no phone");
-		       return;};
-
-
-            
+	       
                Document doc = Jsoup.parse(mp1);
                String text = doc.body().text();  
                System.out.println("text = "+text);
+
+	       System.out.println("regex start..");
+	       Pattern p = Pattern.compile(".+([0-9][0-9][0-9]).+");
+		Matcher mr = p.matcher(text);
+		boolean hasPhone = mr.matches();
+	       	System.out.println(hasPhone);
+               if (!hasPhone){
+                    System.out.println("text for pattern .+([0-9][0-9][0-9]).+ not found");
+                    return;};
+	 	System.out.println("pattern ([0-9][0-9][0-9]) found");
               
+		Pattern ptrn1 = Pattern.compile(".+([0-9][0-9][0-9]).+[0-9].+[0-9].+[0-9].+[0-9].+");
+		Matcher mr1   = ptrn1.matcher(text);
+		boolean hasPhone1 = mr1.matches();
+		if (!hasPhone1){
+                    System.out.println("text for pattern .+([0-9][0-9][0-9]).+[0-9].+[0-9].+[0-9].+[0-9].+ not found");
+                    return;};
+		System.out.println("pattern ([0-9][0-9][0-9]) found");
+		
                int SendWebhook = 1;
                if (SendWebhook == 1){ 
                Gson gson= new Gson();
