@@ -39,20 +39,27 @@ public class MailServlet extends HttpServlet {
    } 
    
    private void readAutobrokerMail(){
-         final String user = "luidorexpertALL";       
-         final String pass = "cfirdrfnabxyzmgk";
-         final String host = "imap.yandex.ru";
 
+	 final String host = A.AUTOBROKERMAIL_HOST;  
+	 final String user = A.AUTOBROKERMAIL_LOGIN;
+         final String pass = A.AUTOBROKERMAIL_PASSWORD;
+
+	 System.out.printf("host = %s", host);
+	 System.out.printf("user = %s", user);
+	 System.out.printf("pass = %s", pass);
+	 
          try {
            
+            String strg = A.AUTOBROKERMAIL_HOST;
+	    System.out.printf("strg = %s", strg);
+		 
             Properties props = new Properties();
-
             props.put("mail.debug", "false");
-
             props.put("mail.store.protocol", "imaps");
-            Session session = Session.getInstance(props);
-            Store store = session.getStore();
 
+            Session session = Session.getInstance(props);
+
+            Store store = session.getStore();
             store.connect(host, user, pass);
 
             Folder inbox = store.getFolder("INBOX");
@@ -126,7 +133,8 @@ public class MailServlet extends HttpServlet {
                };
             }
           
-          } catch (Exception e) { /*report an error*/ }
+          } catch (Exception e) { 
+		  e.printStackTrace();}
 
    }
     
