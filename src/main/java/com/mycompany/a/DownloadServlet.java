@@ -34,7 +34,7 @@ public class DownloadServlet extends HttpServlet {
 		BufferedReader reader = request.getReader();
     		while ((line = reader.readLine()) != null){
       			jb.append(line);	
-			System.out.println("line = "+line);
+			//System.out.println("line = "+line);
 		};
     	} catch (Exception e) { /*report an error*/ }     
 	
