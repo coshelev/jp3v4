@@ -37,6 +37,10 @@ public class JettyServer {
 	//Read autobroker mail
 	context.addServlet(new ServletHolder(new MailServlet("mail")),"/mail/*");	
 
+	//context.addSevlet(new ServletHolder(new DownloadServlet()),"/download/*");
+	context.addServlet(new ServletHolder(new DownloadServlet()),"/download/*");
+
+
 	// this servlet create web-page with script to create sse-connection to http-server to url "/ssevent/"
 	context.addServlet(new ServletHolder(new Servlet2("From Servlet 2, creating sse-connetion to /ssevent/ url  ")),"/en/*");
 
