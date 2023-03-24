@@ -1,20 +1,33 @@
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
 
 import java.io.*;
 import com.google.gson.*;
 import com.google.gson.stream.JsonReader;
 import java.util.*;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 class A{
 
+
 	//private static final Logger logger = LogManager.getLogger("App");
-	
+	private static final Logger LOG = LoggerFactory.getLogger(A.class);
+
 	public static String AUTOBROKERMAIL_HOST     = "";
 	public static String AUTOBROKERMAIL_LOGIN    = "";
 	public static String AUTOBROKERMAIL_PASSWORD = "";
 
 	public static void main(String[] args){
+		
+
+	LOG.info("jetty-{}; jvm {}",  "My example for info ", System.getProperty("java.version"));		
+	LOG.warn("This is my example for warning");
+	LOG.info("LOG.isDebugEnabled()= {}",LOG.isDebugEnabled());
+	LOG.debug("doStop {}", "This is exapmle for debug");
+	if (LOG.isDebugEnabled())
+            LOG.debug("{}", "Debug enabled");
 
 	   Gson gson= new Gson();
 
