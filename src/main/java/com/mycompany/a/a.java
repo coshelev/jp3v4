@@ -1,5 +1,3 @@
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
 
 import java.io.*;
 import com.google.gson.*;
@@ -22,7 +20,7 @@ class A{
 	public static void main(String[] args){
 		
 
-	LOG.info("jetty-{}; jvm {}",  "My example for info ", System.getProperty("java.version"));		
+	LOG.info("{}; jvm {}",  "My example for info ", System.getProperty("java.version"));		
 	LOG.warn("This is my example for warning");
 	LOG.info("LOG.isDebugEnabled()= {}",LOG.isDebugEnabled());
 	LOG.debug("doStop {}", "This is exapmle for debug");
@@ -56,17 +54,13 @@ class A{
 		System.out.printf("map.toString() = %s \n",map.toString());
 
 		AUTOBROKERMAIL_HOST = map.get("autobrokerMail.host");
-		System.out.printf("AUTOBROKERMAIL_HOST = %s \n", AUTOBROKERMAIL_HOST);
-
 		AUTOBROKERMAIL_LOGIN = map.get("autobrokerMail.login");
-                System.out.printf("AUTOBROKERMAIL_HOST = %s \n", AUTOBROKERMAIL_LOGIN);
-
 		AUTOBROKERMAIL_PASSWORD = map.get("autobrokerMail.password");
-                System.out.printf("AUTOBROKERMAIL_HOST = %s \n", AUTOBROKERMAIL_PASSWORD);
-
-		System.out.print ("	class A before jetty \n");
-		//logger.info("class A (i.e app) before jetty");
-
+		LOG.info(" AUTOBROKERMAIL: HOST = {}; LOGIN = {}; PASSWORD = {}", AUTOBROKERMAIL_HOST, AUTOBROKERMAIL_LOGIN, AUTOBROKERMAIL_PASSWORD);
+		
+		LOG.info("{}", " * class A before jetty *");
+		
+		//Start webserever
 		JettyServer server = new JettyServer();
 		try {
         		server.start();
