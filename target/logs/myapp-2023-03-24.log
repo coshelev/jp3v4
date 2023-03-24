@@ -1,0 +1,39 @@
+11:16:54.074 [main] [INFO ] [A]: My example for info ; jvm 11.0.13
+11:16:54.107 [main] [WARN ] [A]: This is my example for warning
+11:16:54.109 [main] [INFO ] [A]: LOG.isDebugEnabled()= false
+11:16:54.198 [main] [INFO ] [A]:  AUTOBROKERMAIL: HOST = imap.yandex.ru; LOGIN = luidorexpertALL; PASSWORD = cfirdrfnabxyzmgk
+11:16:54.229 [main] [INFO ] [org.eclipse.jetty.util.log]: Logging initialized @487ms to org.eclipse.jetty.util.log.Slf4jLog
+11:16:54.264 [main] [DEBUG] [org.eclipse.jetty.server.AbstractConnector]: ServerConnector@23d2a7e8{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added HttpConnectionFactory@687080dc[HTTP/1.1]
+11:16:54.318 [main] [INFO ] [org.eclipse.jetty.server.Server]: jetty-9.4.30.v20200611
+11:16:54.331 [main] [DEBUG] [org.eclipse.jetty.server.handler.AbstractHandler]: starting org.eclipse.jetty.server.Server@12028586
+11:16:54.365 [main] [DEBUG] [org.eclipse.jetty.server.handler.AbstractHandler]: starting o.e.j.s.ServletContextHandler@58c1c010{/,null,STARTING}
+11:16:54.383 [main] [INFO ] [org.eclipse.jetty.server.session]: DefaultSessionIdManager workerName=node0
+11:16:54.384 [main] [INFO ] [org.eclipse.jetty.server.session]: No SessionScavenger set, using defaults
+11:16:54.394 [main] [DEBUG] [org.eclipse.jetty.server.session]: Using own scheduler for scavenging
+11:16:54.396 [main] [INFO ] [org.eclipse.jetty.server.session]: Scavenging every 660000ms
+11:16:54.400 [main] [DEBUG] [org.eclipse.jetty.server.handler.AbstractHandler]: starting org.eclipse.jetty.server.session.SessionHandler992802731==dftMaxIdleSec=-1
+11:16:54.409 [main] [DEBUG] [org.eclipse.jetty.server.handler.AbstractHandler]: starting ServletHandler@a4102b8{STARTING}
+11:16:54.415 [main] [INFO ] [org.eclipse.jetty.server.handler.ContextHandler]: Started o.e.j.s.ServletContextHandler@58c1c010{/,null,AVAILABLE}
+11:16:54.415 [main] [DEBUG] [org.eclipse.jetty.server.handler.AbstractHandler]: starting ErrorHandler@6293abcc{STARTING}
+11:16:54.434 [main] [INFO ] [org.eclipse.jetty.server.AbstractConnector]: Started ServerConnector@23d2a7e8{HTTP/1.1,[http/1.1]}{0.0.0.0:8680}
+11:16:54.435 [main] [INFO ] [org.eclipse.jetty.server.Server]: Started @695ms
+11:23:20.311 [main] [INFO ] [A]: My example for info ; jvm 11.0.13
+11:23:20.343 [main] [WARN ] [A]: This is my example for warning
+11:23:20.344 [main] [INFO ] [A]: LOG.isDebugEnabled()= false
+11:23:20.443 [main] [INFO ] [A]:  AUTOBROKERMAIL: HOST = imap.yandex.ru; LOGIN = luidorexpertALL; PASSWORD = cfirdrfnabxyzmgk
+11:23:20.445 [main] [INFO ] [A]:  * class A before jetty *
+11:23:20.481 [main] [INFO ] [org.eclipse.jetty.util.log]: Logging initialized @477ms to org.eclipse.jetty.util.log.Slf4jLog
+11:23:20.517 [main] [DEBUG] [org.eclipse.jetty.server.AbstractConnector]: ServerConnector@23d2a7e8{HTTP/1.1,[http/1.1]}{0.0.0.0:0} added HttpConnectionFactory@687080dc[HTTP/1.1]
+11:23:20.583 [main] [INFO ] [org.eclipse.jetty.server.Server]: jetty-9.4.30.v20200611
+11:23:20.597 [main] [DEBUG] [org.eclipse.jetty.server.handler.AbstractHandler]: starting org.eclipse.jetty.server.Server@12028586
+11:23:20.638 [main] [DEBUG] [org.eclipse.jetty.server.handler.AbstractHandler]: starting o.e.j.s.ServletContextHandler@58c1c010{/,null,STARTING}
+11:23:20.655 [main] [INFO ] [org.eclipse.jetty.server.session]: DefaultSessionIdManager workerName=node0
+11:23:20.660 [main] [INFO ] [org.eclipse.jetty.server.session]: No SessionScavenger set, using defaults
+11:23:20.666 [main] [DEBUG] [org.eclipse.jetty.server.session]: Using own scheduler for scavenging
+11:23:20.667 [main] [INFO ] [org.eclipse.jetty.server.session]: Scavenging every 600000ms
+11:23:20.670 [main] [DEBUG] [org.eclipse.jetty.server.handler.AbstractHandler]: starting org.eclipse.jetty.server.session.SessionHandler992802731==dftMaxIdleSec=-1
+11:23:20.679 [main] [DEBUG] [org.eclipse.jetty.server.handler.AbstractHandler]: starting ServletHandler@a4102b8{STARTING}
+11:23:20.685 [main] [INFO ] [org.eclipse.jetty.server.handler.ContextHandler]: Started o.e.j.s.ServletContextHandler@58c1c010{/,null,AVAILABLE}
+11:23:20.686 [main] [DEBUG] [org.eclipse.jetty.server.handler.AbstractHandler]: starting ErrorHandler@6293abcc{STARTING}
+11:23:20.706 [main] [INFO ] [org.eclipse.jetty.server.AbstractConnector]: Started ServerConnector@23d2a7e8{HTTP/1.1,[http/1.1]}{0.0.0.0:8680}
+11:23:20.707 [main] [INFO ] [org.eclipse.jetty.server.Server]: Started @705ms
